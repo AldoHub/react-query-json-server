@@ -36,10 +36,25 @@ const getSinglePost = async(postId) => {
     return post;
 }
 
+
+const updatePost = async(post) => {
+    const options = {
+        method: "put",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(post)
+    }
+
+    const response = await fetch(`${api_uri}/posts/${post.id}`, options);
+    return await response.json();
+}
+
 //export the functions
 export const postsService = {
     getPosts,
     createPost,
     getSinglePost,
+    updatePost,
 }
 

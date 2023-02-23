@@ -26,7 +26,7 @@
     background-position: center;
 }
 
-.post-container {
+.post-container , .update-form-container{
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -43,4 +43,11 @@
 .post-container img {
     max-width: 100%;
 
+}
+
+.update-form-container {
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
 }
